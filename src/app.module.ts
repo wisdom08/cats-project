@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import * as mongoose from 'mongoose';
 import { LoggerMiddleware } from './common/middlewares/logger.middleware';
+import { CatsModule } from './cats/cats.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { LoggerMiddleware } from './common/middlewares/logger.middleware';
       useNewUrlParser: true,
       useUnifiedTopology: true,
     }),
+    CatsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
