@@ -47,15 +47,8 @@ export class CatsController {
   logIn(@Body() data: LoginRequestDto) {
     return this.authService.jwtLogin(data);
   }
-
-  @ApiOperation({ summary: '로그아웃' })
-  @Post('logout')
-  logOut() {
-    return 'logout';
-  }
-
   @ApiOperation({ summary: '고양이 이미지 업로드' })
-  @Post('upload/cats')
+  @Post('upload')
   uploadCatImg() {
     return 'uploadImg';
   }
