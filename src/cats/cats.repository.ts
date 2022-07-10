@@ -32,4 +32,9 @@ export class CatsRepository {
     const newCat = await cat.save();
     return newCat.readOnlyData;
   }
+
+  async findAll() {
+    const cats = await this.catModel.find();
+    return cats;
+  }
 }
